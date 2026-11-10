@@ -1,0 +1,216 @@
+/* SpendWise Budget Tracker - Week 2 CSS practice */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #243247;
+    background-color: #f4f7fb;
+}
+
+.site-header {
+    padding: 22px 6%;
+    color: #ffffff;
+    background-color: #102b50;
+    text-align: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.brand img {
+    display: block;
+}
+
+.site-header p {
+    margin: 8px 0 0;
+    color: #dce7f5;
+}
+
+.container {
+    width: min(100% - 32px, 1000px);
+    margin: 32px auto;
+}
+
+section {
+    margin-bottom: 28px;
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid #e1e8f0;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(16, 43, 80, 0.05);
+}
+
+h1, h2 {
+    color: #102b50;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.intro-section {
+    text-align: center;
+}
+
+/* Descendant selector: styles table headings inside the expense section. */
+.expenses-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.expenses-section th,
+.expenses-section td {
+    padding: 13px 15px;
+    border: 1px solid #d7e0eb;
+    text-align: left;
+}
+
+.expenses-section thead {
+    color: #ffffff;
+    background-color: #1c5b91;
+}
+
+/* Positional pseudo-class: alternate table row backgrounds. */
+.expenses-section tbody tr:nth-child(even) {
+    background-color: #edf3f9;
+}
+
+/* Hover effect with a smooth transition. */
+.expenses-section tbody tr {
+    transition: background-color 0.25s ease;
+}
+
+.expenses-section tbody tr:hover {
+    background-color: #dcecf8;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+/* Direct-child selector: targets only the form directly inside this section. */
+.add-expense-section > form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+input:not([type="submit"]),
+select {
+    width: 100%;
+    min-height: 43px;
+    padding: 10px 12px;
+    border: 1px solid #b9c7d8;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font: inherit;
+}
+
+/* Focus pseudo-class improves visibility when a field is selected. */
+input:focus,
+select:focus {
+    outline: 3px solid rgba(28, 91, 145, 0.2);
+    border-color: #1c5b91;
+}
+
+button {
+    align-self: end;
+    min-height: 43px;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #d99a24;
+    border: 0;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+button:hover {
+    background-color: #b97d12;
+    transform: translateY(-1px);
+}
+
+.form-note {
+    margin-bottom: 0;
+    color: #68778a;
+    font-size: 0.9rem;
+}
+
+.help-section details {
+    padding: 14px;
+    background-color: #f4f7fb;
+    border-radius: 6px;
+}
+
+.help-section summary {
+    color: #1c5b91;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.site-footer {
+    padding: 18px;
+    color: #ffffff;
+    background-color: #102b50;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+@media (max-width: 650px) {
+    .add-expense-section > form {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+}
