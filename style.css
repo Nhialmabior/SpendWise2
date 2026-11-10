@@ -313,3 +313,20 @@ button:focus-visible {
         white-space: nowrap;
     }
 }
+
+
+/* Week 1 selector practice: explicit ID, class, and element selectors. */
+#page-header {
+    /* ID selector targets the main page header. */
+    text-align: center;
+}
+
+.expense-section {
+    /* Class selector targets the recorded expenses card. */
+    background-color: var(--surface);
+}
+
+input {
+    /* Element selector styles all form inputs consistently. */
+    font-family: 'DM Sans', sans-serif;
+}
